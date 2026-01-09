@@ -1,11 +1,102 @@
-.slogan-line {
+/* ===============================
+   Navbar LOGO
+   =============================== */
+.navbar-brand {
   display: block;
-  white-space: normal;
-  font-size: 28px;
-  line-height: 1.6;
-  margin-bottom: 12px;
-  color: #ffffff;
-  font-weight: 500;
-  text-align: center;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  width: 220px;
+  height: 56px;
+  background-image: url("/img/yuxinglogo.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  font-size: 0;
+  padding: 0;
 }
+
+/* ===============================
+   首页打字机 Slogan
+   =============================== */
+.home-slogan {
+  text-align: center;
+}
+
+.home-slogan .line-1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.home-slogan .line-2 {
+  font-size: 30px;
+  color: #f6c343;
+  margin-top: 8px;
+}
+
+.home-slogan .line-3 {
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-top: 6px;
+}
+
+/* ===============================
+   About 页面头像完整显示
+   =============================== */
+.about-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* 关键：完整显示 */
+  background-color: #fff; /* 可选，防止透明 PNG 边缘不好看 */
+}
+
+/* ===============================
+   产品系列卡片容器
+   =============================== */
+.product-series {
+  margin-top: 40px;
+}
+
+/* 单个产品卡片 */
+.product-card {
+  display: block;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  text-decoration: none !important;
+  color: #333;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+/* hover 效果 */
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* 图标 */
+.product-icon {
+  font-size: 56px;
+  color: #0d6efd; /* 主色，可换成企业色 */
+  margin-bottom: 20px;
+}
+
+/* 标题 */
+.product-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* 描述 */
+.product-card p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ===============================
+   其他页面美化（以后继续加）
+   =============================== */
