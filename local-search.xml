@@ -45,11 +45,11 @@
   
   
   <entry>
-    <title>YX-780</title>
+    <title>公司简介</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<h1 id="射出部分"><a href="#射出部分" class="headerlink" title="射出部分"></a>射出部分</h1><p><img src="/img/yx780/yx780-sc.png" alt="射出部分"></p><h1 id="液压部分"><a href="#液压部分" class="headerlink" title="液压部分"></a>液压部分</h1><p><img src="/img/yx780/yx780-yy.png" alt="液压部分"></p><h1 id="电控部分"><a href="#电控部分" class="headerlink" title="电控部分"></a>电控部分</h1><p><img src="/img/yx780/yx780-dk.png" alt="电控部分"></p><h1 id="锁模部分"><a href="#锁模部分" class="headerlink" title="锁模部分"></a>锁模部分</h1><p><img src="/img/yx780/yx780-sm.png" alt="锁模部分"></p><h1 id="调模部分"><a href="#调模部分" class="headerlink" title="调模部分"></a>调模部分</h1><p><img src="/img/yx780/yx780-tm.png" alt="调模部分"></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="宁波宇兴塑料机械厂简介"><a href="#宁波宇兴塑料机械厂简介" class="headerlink" title="宁波宇兴塑料机械厂简介"></a>宁波宇兴塑料机械厂简介</h2><p>宁波宇兴塑料机械厂是一家专业生产塑料注射成型机的高新技术企业，位于宁波经济技术开发区，占地面积50000多平方米。公司在成立之初就通过了CE认证和IS09001_2000质量体系认证，是国内外塑机制造业界知名企业。公司拥有大型加工中心，精确的检测设备，使机器质量达到同行业之首。在曰益竞争和用户不断求新的基础上，公司吸取欧美曰本塑机行业的先进理念，设计出高速、精密的塑机，满足了不同用户的需求。<br>宇兴塑料机械厂以全新的经营理念、雄厚的专业技术力量，不断开拓、不断进取、不断扩大，达到年产塑机1000多台，销售超亿元。<br>宇兴机械技术源自欧洲，结合国内外客户的实际需求，以其产品的优质、高效、节能来赢得市场。产品远销美国、欧洲、南美、中东、东南亚等国家和地区。<br>宇兴公司在国内外设立了五十多个服务网点，为国内外客商提供业务咨询、技术支持及售后服务，我们的业务代表和专业工程师随时准备为您服务。<br>客户是企业生命之源。</p><h2 id="地理位置"><a href="#地理位置" class="headerlink" title="地理位置"></a>地理位置</h2><div id="map" style="width:100%;height:420px;border-radius:12px;"></div><!-- 百度地图 JS API --><script src="https://api.map.baidu.com/api?v=3.0&ak=YDt5b4XjjWl6chkMWyegg3DuHV2nNvDf"></script><script>// ===== 1️⃣ Web Mercator → 经纬度 转换函数 =====function mercatorToLngLat(x, y) {  var lng = x / 20037508.34 * 180;  var lat = y / 20037508.34 * 180;  lat = 180 / Math.PI * (2 * Math.atan(Math.exp(lat * Math.PI / 180)) - Math.PI / 2);  return new BMap.Point(lng, lat);}// ===== 2️⃣ 你获取到的“巨大坐标”（直接填这里）=====var mercatorLng = 13534464.78071;var mercatorLat = 3461072.17505;// 转换为百度可用的经纬度var point = mercatorToLngLat(mercatorLng, mercatorLat);// ===== 3️⃣ 初始化地图 =====var map = new BMap.Map("map");map.centerAndZoom(point, 17);map.enableScrollWheelZoom(true);// ===== 4️⃣ 添加标注 =====var marker = new BMap.Marker(point);map.addOverlay(marker);// ===== 5️⃣ 信息窗口（企业标注）=====var infoWindow = new BMap.InfoWindow(  `  <strong style="font-size:15px;">宁波宇兴塑料机械厂</strong><br>  地址：宁波市鄞州区经济技术开发区<br>  电话：0574-XXXXXXX  `,  {    width: 260,    height: 120  });marker.openInfoWindow(infoWindow);marker.addEventListener("click", function () {  this.openInfoWindow(infoWindow);});</script>]]></content>
     
   </entry>
   
@@ -67,66 +67,22 @@
   
   
   <entry>
-    <title>产品展示</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[<div class="row"><div class="col-md-4 text-center"><a class="btn btn-outline-primary btn-lg" href="/products/thx/"><i class="iconfont icon-machine"></i><br>THX系列</a></div><div class="col-md-4 text-center"><a class="btn btn-outline-primary btn-lg" href="/products/yx/"><i class="iconfont icon-machine"></i><br>YX系列</a></div><div class="col-md-4 text-center"><a class="btn btn-outline-primary btn-lg" href="/products/xt/"><i class="iconfont icon-machine"></i><br>XT系列</a></div></div>]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>联系我们</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<h3 id="宁波宇兴塑料机械厂"><a href="#宁波宇兴塑料机械厂" class="headerlink" title="宁波宇兴塑料机械厂"></a>宁波宇兴塑料机械厂</h3><ul><li><strong>地址：</strong> 宁波市镇海区镇宁西路381号</li><li><strong>电话：</strong> 0574-83032202</li><li><strong>传真：</strong> 0574-83032203</li><li><strong>邮箱：</strong> <a href="mailto:&#x6e;&#x62;&#x79;&#x75;&#120;&#105;&#x6e;&#103;&#64;&#49;&#x32;&#x36;&#x2e;&#99;&#x6f;&#x6d;">nbyuxing@126.com</a></li><li><strong>邮编：</strong> 315015</li></ul><hr><h3 id="公司地图"><a href="#公司地图" class="headerlink" title="公司地图"></a>公司地图</h3><div id="map2" style="width:100%;height:400px;"></div><script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YDt5b4XjjWl6chkMWyegg3DuHV2nNvDf"></script><script>var map2 = new BMap.Map("map2");var point2 = new BMap.Point(121.55027,29.87386);map2.centerAndZoom(point2, 16);map2.addOverlay(new BMap.Marker(point2));</script>]]></content>
+    <content type="html"><![CDATA[<h3 id="宁波宇兴塑料机械厂"><a href="#宁波宇兴塑料机械厂" class="headerlink" title="宁波宇兴塑料机械厂"></a>宁波宇兴塑料机械厂</h3><ul><li><strong>地址：</strong> 宁波市镇海区镇宁西路381号</li><li><strong>电话：</strong> 0574-83032202</li><li><strong>传真：</strong> 0574-83032203</li><li><strong>邮箱：</strong> <a href="mailto:&#x6e;&#x62;&#121;&#117;&#x78;&#105;&#110;&#x67;&#64;&#49;&#x32;&#x36;&#x2e;&#x63;&#111;&#x6d;">nbyuxing@126.com</a></li><li><strong>邮编：</strong> 315015</li></ul><hr><h3 id="公司地图"><a href="#公司地图" class="headerlink" title="公司地图"></a>公司地图</h3><div id="map2" style="width:100%;height:400px;"></div><script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YDt5b4XjjWl6chkMWyegg3DuHV2nNvDf"></script><script>var map2 = new BMap.Map("map2");var point2 = new BMap.Point(121.55027,29.87386);map2.centerAndZoom(point2, 16);map2.addOverlay(new BMap.Marker(point2));</script>]]></content>
     
   </entry>
   
   
   
   <entry>
-    <title>公司简介</title>
+    <title>YX-780</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<h2 id="宁波宇兴塑料机械厂简介"><a href="#宁波宇兴塑料机械厂简介" class="headerlink" title="宁波宇兴塑料机械厂简介"></a>宁波宇兴塑料机械厂简介</h2><p>宁波宇兴塑料机械厂是一家专业生产塑料注射成型机的高新技术企业，位于宁波经济技术开发区，占地面积50000多平方米。公司在成立之初就通过了CE认证和IS09001_2000质量体系认证，是国内外塑机制造业界知名企业。公司拥有大型加工中心，精确的检测设备，使机器质量达到同行业之首。在曰益竞争和用户不断求新的基础上，公司吸取欧美曰本塑机行业的先进理念，设计出高速、精密的塑机，满足了不同用户的需求。<br>宇兴塑料机械厂以全新的经营理念、雄厚的专业技术力量，不断开拓、不断进取、不断扩大，达到年产塑机1000多台，销售超亿元。<br>宇兴机械技术源自欧洲，结合国内外客户的实际需求，以其产品的优质、高效、节能来赢得市场。产品远销美国、欧洲、南美、中东、东南亚等国家和地区。<br>宇兴公司在国内外设立了五十多个服务网点，为国内外客商提供业务咨询、技术支持及售后服务，我们的业务代表和专业工程师随时准备为您服务。<br>客户是企业生命之源。</p><h2 id="地理位置"><a href="#地理位置" class="headerlink" title="地理位置"></a>地理位置</h2><div id="map" style="width:100%;height:420px;"></div><script src="https://api.map.baidu.com/api?v=3.0&ak=YDt5b4XjjWl6chkMWyegg3DuHV2nNvDf"></script><script>  // 1. 创建地图实例  var map = new BMap.Map("map");  // 2. 设置公司真实坐标（务必用百度地图右键获取）  var point = new BMap.Point(13534464.78071,3461072.17505);  // 3. 初始化地图  map.centerAndZoom(point, 17);  // 4. 开启基础交互  map.enableScrollWheelZoom(true);  map.enableDragging();  // 5. 添加控件  map.addControl(new BMap.NavigationControl());  map.addControl(new BMap.ScaleControl());  // 6. 添加公司标注  var marker = new BMap.Marker(point);  map.addOverlay(marker);  // 7. 信息窗口内容  var infoWindow = new BMap.InfoWindow(    `    <div style="font-size:14px;line-height:1.8;">      <strong>宁波宇兴塑料机械厂</strong><br>      地址：浙江省宁波市鄞州区中河街道孙马村<br>      主营：注塑机 · 塑料成型设备    </div>    `,    {      width: 260,      height: 120,      title: "公司位置"    }  );  // 8. 默认打开信息窗口  marker.openInfoWindow(infoWindow);  // 9. 点击标注再次打开  marker.addEventListener("click", function () {    this.openInfoWindow(infoWindow);  });</script>]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title></title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[/* ===============================   Navbar LOGO   =============================== */.navbar-brand {  display: block;  width: 220px;  height: 56px;  background-image: url("/img/yuxinglogo.png");  background-repeat: no-repeat;  background-position: left center;  background-size: contain;  font-size: 0;  padding: 0;}/* ===============================   首页打字机 Slogan   =============================== */.home-slogan {  text-align: center;}.home-slogan .line-1 {  font-size: 56px;  font-weight: 700;  color: #ffffff;}.home-slogan .line-2 {  font-size: 30px;  color: #f6c343;  margin-top: 8px;}.home-slogan .line-3 {  font-size: 20px;  color: #ffffff;  letter-spacing: 1px;  margin-top: 6px;}/* ===============================   About 页面头像完整显示   =============================== */.about-avatar img {  width: 100%;  height: 100%;  object-fit: contain;   /* 关键：完整显示 */  background-color: #fff; /* 可选，防止透明 PNG 边缘不好看 */}/* ===============================   产品系列卡片容器   =============================== */.product-series {  margin-top: 40px;}/* 单个产品卡片 */.product-card {  display: block;  background: #ffffff;  border-radius: 12px;  padding: 40px 20px;  text-align: center;  text-decoration: none !important;  color: #333;  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);  transition: all 0.3s ease;  height: 100%;}/* hover 效果 */.product-card:hover {  transform: translateY(-8px);  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);}/* 图标 */.product-icon {  font-size: 56px;  color: #0d6efd; /* 主色，可换成企业色 */  margin-bottom: 20px;}/* 标题 */.product-card h3 {  font-size: 24px;  font-weight: 700;  margin-bottom: 12px;}/* 描述 */.product-card p {  font-size: 15px;  color: #666;  line-height: 1.6;}/* ===============================   其他页面美化（以后继续加）   =============================== */]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>XT系列</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[<h2 id="XT-120"><a href="#XT-120" class="headerlink" title="XT-120"></a><a href="/products/xt/xt-120/">XT-120</a></h2><ul><li>锁模力：120 吨  </li><li>适用产品：精密塑料件  </li><li>特点：节能、稳定</li></ul><p><a href="/products/xt/xt-120/">查看详情</a></p><hr><h2 id="XT-180"><a href="#XT-180" class="headerlink" title="XT-180"></a><a href="/products/xt/xt-180/">XT-180</a></h2><ul><li>锁模力：180 吨  </li><li>适用产品：中大型塑料制品  </li><li>特点：高速、高稳定性</li></ul><p><a href="/products/xt/xt-180/">查看详情</a></p>]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>YX系列</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[<h2 id="YX-780"><a href="#YX-780" class="headerlink" title="YX-780"></a><a href="/products/yx/yx-780/">YX-780</a></h2><ul><li>锁模力：100 吨  </li><li>适用产品：精密塑料件  </li><li>特点：节能、稳定</li></ul><p><a href="/products/yx/yx-780/">查看详情</a></p><hr><h2 id="YX-1800S"><a href="#YX-1800S" class="headerlink" title="YX-1800S"></a><a href="/products/yx/yx-1800s/">YX-1800S</a></h2><ul><li>锁模力：180 吨  </li><li>适用产品：中大型塑料制品  </li><li>特点：高速、高稳定性</li></ul><p><a href="/products/yx/yx-1800s/">查看详情</a></p><hr><h2 id="YX-4100"><a href="#YX-4100" class="headerlink" title="YX-4100"></a><a href="/products/yx/yx-4100/">YX-4100</a></h2><ul><li>锁模力：400 吨  </li><li>适用产品：大型塑料制品  </li><li>特点：高速、高稳定性</li></ul><p><a href="/products/yx/yx-4100/">查看详情</a></p><hr>]]></content>
+    <content type="html"><![CDATA[<h1 id="射出部分"><a href="#射出部分" class="headerlink" title="射出部分"></a>射出部分</h1><p><img src="/img/yx780/yx780-sc.png" alt="射出部分"></p><h1 id="液压部分"><a href="#液压部分" class="headerlink" title="液压部分"></a>液压部分</h1><p><img src="/img/yx780/yx780-yy.png" alt="液压部分"></p><h1 id="电控部分"><a href="#电控部分" class="headerlink" title="电控部分"></a>电控部分</h1><p><img src="/img/yx780/yx780-dk.png" alt="电控部分"></p><h1 id="锁模部分"><a href="#锁模部分" class="headerlink" title="锁模部分"></a>锁模部分</h1><p><img src="/img/yx780/yx780-sm.png" alt="锁模部分"></p><h1 id="调模部分"><a href="#调模部分" class="headerlink" title="调模部分"></a>调模部分</h1><p><img src="/img/yx780/yx780-tm.png" alt="调模部分"></p>]]></content>
     
   </entry>
   
@@ -144,22 +100,55 @@
   
   
   <entry>
-    <title>THX系列</title>
+    <title></title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<h2 id="THX-120"><a href="#THX-120" class="headerlink" title="THX-120"></a><a href="/products/thx/thx-120/">THX-120</a></h2><ul><li>锁模力：120 吨  </li><li>适用产品：精密塑料件  </li><li>特点：节能、稳定</li></ul><p><a href="/products/thx/thx-120/">查看详情</a></p><hr><h2 id="THX-180"><a href="#THX-180" class="headerlink" title="THX-180"></a><a href="/products/thx/thx-180/">THX-180</a></h2><ul><li>锁模力：180 吨  </li><li>适用产品：中大型塑料制品  </li><li>特点：高速、高稳定性</li></ul><p><a href="/products/thx/thx-180/">查看详情</a></p>]]></content>
+    <content type="html"><![CDATA[/* ===============================   Navbar LOGO   =============================== */.navbar-brand {  display: block;  width: 220px;  height: 56px;  background-image: url("/img/yuxinglogo.png");  background-repeat: no-repeat;  background-position: left center;  background-size: contain;  font-size: 0;  padding: 0;}/* ===============================   首页打字机 Slogan   =============================== */.home-slogan {  text-align: center;}.home-slogan .line-1 {  font-size: 56px;  font-weight: 700;  color: #ffffff;}.home-slogan .line-2 {  font-size: 30px;  color: #f6c343;  margin-top: 8px;}.home-slogan .line-3 {  font-size: 20px;  color: #ffffff;  letter-spacing: 1px;  margin-top: 6px;}/* ===============================   About 页面头像完整显示   =============================== */.about-avatar img {  width: 100%;  height: 100%;  object-fit: contain;   /* 关键：完整显示 */  background-color: #fff; /* 可选，防止透明 PNG 边缘不好看 */}/* ===============================   产品系列卡片容器   =============================== */.product-series {  margin-top: 40px;}/* 单个产品卡片 */.product-card {  display: block;  background: #ffffff;  border-radius: 12px;  padding: 40px 20px;  text-align: center;  text-decoration: none !important;  color: #333;  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);  transition: all 0.3s ease;  height: 100%;}/* hover 效果 */.product-card:hover {  transform: translateY(-8px);  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);}/* 图标 */.product-icon {  font-size: 56px;  color: #0d6efd; /* 主色，可换成企业色 */  margin-bottom: 20px;}/* 标题 */.product-card h3 {  font-size: 24px;  font-weight: 700;  margin-bottom: 12px;}/* 描述 */.product-card p {  font-size: 15px;  color: #666;  line-height: 1.6;}/* ===============================   其他页面美化（以后继续加）   =============================== */]]></content>
     
   </entry>
   
   
   
   <entry>
-    <title>THX-180</title>
+    <title>产品展示</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<h3 id="THX-180-产品介绍"><a href="#THX-180-产品介绍" class="headerlink" title="THX-180 产品介绍"></a>THX-180 产品介绍</h3><p>这里写参数、图片、特点</p>]]></content>
+    <content type="html"><![CDATA[<div class="row"><div class="col-md-4 text-center"><a class="btn btn-outline-primary btn-lg" href="/products/thx/"><i class="iconfont icon-machine"></i><br>THX系列</a></div><div class="col-md-4 text-center"><a class="btn btn-outline-primary btn-lg" href="/products/yx/"><i class="iconfont icon-machine"></i><br>YX系列</a></div><div class="col-md-4 text-center"><a class="btn btn-outline-primary btn-lg" href="/products/xt/"><i class="iconfont icon-machine"></i><br>XT系列</a></div></div>]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>THX系列</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[<h2 id="THX-系列高速精密注塑机"><a href="#THX-系列高速精密注塑机" class="headerlink" title="THX 系列高速精密注塑机"></a>THX 系列高速精密注塑机</h2><p>THX 系列注塑机定位于<strong>高速、稳定、节能型生产场景</strong>，广泛应用于<br>家电配件、精密塑件、日用品等领域，兼顾效率与成型精度。</p><div class="product-grid">  <div class="product-card">    <img src="/img/products/thx/thx-120.png" alt="THX-120 注塑机">    <h3>THX-120</h3>    <ul>      <li>锁模力：120 吨</li>      <li>高速响应伺服系统</li>      <li>成型稳定，节能省电</li>    </ul>    <a class="btn btn-outline-primary" href="/products/thx/thx-120/">查看详情</a>  </div>  <div class="product-card">    <img src="/img/products/thx/thx-180.png" alt="THX-180 注塑机">    <h3>THX-180</h3>    <ul>      <li>锁模力：180 吨</li>      <li>适合中大型精密制品</li>      <li>高刚性模板结构</li>    </ul>    <a class="btn btn-outline-primary" href="/products/thx/thx-180/">查看详情</a>  </div></div>]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>XT系列</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[<h2 id="XT-系列通用型注塑机"><a href="#XT-系列通用型注塑机" class="headerlink" title="XT 系列通用型注塑机"></a>XT 系列通用型注塑机</h2><p>XT 系列注塑机以<strong>稳定可靠、性价比高</strong>著称，<br>适用于通用塑料制品、包装容器等应用场景。</p><div class="product-grid">  <div class="product-card">    <img src="/img/products/xt/xt-120.png" alt="XT-120 注塑机">    <h3>XT-120</h3>    <ul>      <li>锁模力：120 吨</li>      <li>成熟稳定结构</li>      <li>维护成本低</li>    </ul>    <a class="btn btn-outline-primary" href="/products/xt/xt-120/">查看详情</a>  </div>  <div class="product-card">    <img src="/img/products/xt/xt-180.png" alt="XT-180 注塑机">    <h3>XT-180</h3>    <ul>      <li>锁模力：180 吨</li>      <li>适合中大型模具</li>      <li>连续生产稳定</li>    </ul>    <a class="btn btn-outline-primary" href="/products/xt/xt-180/">查看详情</a>  </div></div>]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>YX系列</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[<h2 id="YX-系列大型注塑机"><a href="#YX-系列大型注塑机" class="headerlink" title="YX 系列大型注塑机"></a>YX 系列大型注塑机</h2><p>YX 系列面向<strong>大型制品、工程塑料、汽车配件</strong>等重载应用，<br>具备超强锁模力与高稳定性。</p><div class="product-grid">  <div class="product-card">    <img src="/img/yx780/yx780.png" alt="YX-780 注塑机">    <h3>YX-780</h3>    <ul>      <li>锁模力：780 吨</li>      <li>适合中大型制品</li>      <li>工业级液压系统</li>    </ul>    <a class="btn btn-outline-primary" href="/products/yx/yx-780/">查看详情</a>  </div>  <div class="product-card">    <img src="/img/products/yx/yx-1800s.png" alt="YX-1800S 注塑机">    <h3>YX-1800S</h3>    <ul>      <li>锁模力：1800 吨</li>      <li>高刚性结构设计</li>      <li>适合汽车配件</li>    </ul>    <a class="btn btn-outline-primary" href="/products/yx/yx-1800s/">查看详情</a>  </div>  <div class="product-card">    <img src="/img/products/yx/yx-4100.png" alt="YX-4100 注塑机">    <h3>YX-4100</h3>    <ul>      <li>锁模力：4100 吨</li>      <li>超大型注塑解决方案</li>      <li>工程塑料专用</li>    </ul>    <a class="btn btn-outline-primary" href="/products/yx/yx-4100/">查看详情</a>  </div></div>]]></content>
     
   </entry>
   
@@ -177,22 +166,44 @@
   
   
   <entry>
-    <title>YX-1800S</title>
+    <title>XT-120</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<h3 id="YX-1800S-产品介绍"><a href="#YX-1800S-产品介绍" class="headerlink" title="YX-1800S 产品介绍"></a>YX-1800S 产品介绍</h3><p>这里写参数、图片、特点</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="XT-120-产品介绍"><a href="#XT-120-产品介绍" class="headerlink" title="XT-120 产品介绍"></a>XT-120 产品介绍</h3><p>这里写参数、图片、特点</p>]]></content>
     
   </entry>
   
   
   
   <entry>
-    <title>YX-780</title>
+    <title>THX-180</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<h3 id="YX-780-产品介绍"><a href="#YX-780-产品介绍" class="headerlink" title="YX-780 产品介绍"></a>YX-780 产品介绍</h3><p>这里写参数、图片、特点</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="THX-180-产品介绍"><a href="#THX-180-产品介绍" class="headerlink" title="THX-180 产品介绍"></a>THX-180 产品介绍</h3><p>这里写参数、图片、特点</p>]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>XT-180</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[<h3 id="XT-180-产品介绍"><a href="#XT-180-产品介绍" class="headerlink" title="XT-180 产品介绍"></a>XT-180 产品介绍</h3><p>这里写参数、图片、特点</p>]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>YX-1800S</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[<h3 id="YX-1800S-产品介绍"><a href="#YX-1800S-产品介绍" class="headerlink" title="YX-1800S 产品介绍"></a>YX-1800S 产品介绍</h3><p>这里写参数、图片、特点</p>]]></content>
     
   </entry>
   
@@ -210,22 +221,11 @@
   
   
   <entry>
-    <title>XT-120</title>
+    <title>YX-780</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<h3 id="XT-120-产品介绍"><a href="#XT-120-产品介绍" class="headerlink" title="XT-120 产品介绍"></a>XT-120 产品介绍</h3><p>这里写参数、图片、特点</p>]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>XT-180</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[<h3 id="XT-180-产品介绍"><a href="#XT-180-产品介绍" class="headerlink" title="XT-180 产品介绍"></a>XT-180 产品介绍</h3><p>这里写参数、图片、特点</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="YX-780-产品介绍"><a href="#YX-780-产品介绍" class="headerlink" title="YX-780 产品介绍"></a>YX-780 产品介绍</h3><p>这里写参数、图片、特点</p>]]></content>
     
   </entry>
   
