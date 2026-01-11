@@ -1,4 +1,42 @@
 /* ===============================
+   百度地图优化
+   =============================== */
+.map-card {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,.15);
+  background: #fff;
+}
+
+.map-title {
+  padding: 12px 18px;
+  font-weight: 600;
+  font-size: 16px;
+  background: linear-gradient(90deg,#0f2027,#203a43,#2c5364);
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.map-dot {
+  width: 10px;
+  height: 10px;
+  background: #00e676;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.map-btn {
+  padding: 8px 16px;
+  background: #1e88e5;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+}
+.map-btn:hover {
+  background: #1565c0;
+}
+/* ===============================
    Navbar LOGO
    =============================== */
 .navbar-brand {

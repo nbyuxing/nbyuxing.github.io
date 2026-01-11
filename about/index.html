@@ -28,8 +28,8 @@
 <meta property="og:site_name">
 <meta property="og:description" content="宇兴塑机,宁波宇兴塑料机械厂简介,注塑机,公司简介,高新技术企业,宁波经济技术开发区">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-01-10T16:33:39.940Z">
-<meta property="article:modified_time" content="2026-01-10T16:33:39.940Z">
+<meta property="article:published_time" content="2026-01-11T12:14:24.533Z">
+<meta property="article:modified_time" content="2026-01-11T12:14:24.533Z">
 <meta property="article:author" content="宁波宇兴塑料机械厂">
 <meta property="article:tag" content="宁波宇兴塑料机械厂,宇兴塑机,注塑机,塑料机械,注塑机厂家,THX注塑机,XT注塑机,YX注塑机">
 <meta name="twitter:card" content="summary_large_image">
@@ -296,54 +296,66 @@
 <article class="about-content page-content mt-5">
   <div class="markdown-body">
     <h2 id="宁波宇兴塑料机械厂简介"><a href="#宁波宇兴塑料机械厂简介" class="headerlink" title="宁波宇兴塑料机械厂简介"></a>宁波宇兴塑料机械厂简介</h2><p>宁波宇兴塑料机械厂是一家专业生产塑料注射成型机的高新技术企业，位于宁波经济技术开发区，占地面积50000多平方米。公司在成立之初就通过了CE认证和IS09001_2000质量体系认证，是国内外塑机制造业界知名企业。公司拥有大型加工中心，精确的检测设备，使机器质量达到同行业之首。在曰益竞争和用户不断求新的基础上，公司吸取欧美曰本塑机行业的先进理念，设计出高速、精密的塑机，满足了不同用户的需求。<br>宇兴塑料机械厂以全新的经营理念、雄厚的专业技术力量，不断开拓、不断进取、不断扩大，达到年产塑机1000多台，销售超亿元。<br>宇兴机械技术源自欧洲，结合国内外客户的实际需求，以其产品的优质、高效、节能来赢得市场。产品远销美国、欧洲、南美、中东、东南亚等国家和地区。<br>宇兴公司在国内外设立了五十多个服务网点，为国内外客商提供业务咨询、技术支持及售后服务，我们的业务代表和专业工程师随时准备为您服务。<br>客户是企业生命之源。</p>
-<h2 id="地理位置"><a href="#地理位置" class="headerlink" title="地理位置"></a>地理位置</h2><div id="map" style="width:100%;height:420px;border-radius:12px;"></div>
+<h2 id="地理位置"><a href="#地理位置" class="headerlink" title="地理位置"></a>地理位置</h2><div style="position:relative;width:100%;height:420px;border-radius:12px;overflow:hidden;">
+  <iframe
+    src="https://map.baidu.com/search/%E5%85%83%E6%98%8E%E6%9C%BA%E6%A2%B0/@13545100.925,3471283.41,19z,-44.4h?querytype=s&wd=%E5%85%83%E6%98%8E%E6%9C%BA%E6%A2%B0&device_ratio=1"
+    width="100%"
+    height="100%"
+    frameborder="0">
+  </iframe>
 
-<!-- 百度地图 JS API -->
-<script src="https://api.map.baidu.com/api?v=3.0&ak=YDt5b4XjjWl6chkMWyegg3DuHV2nNvDf"></script>
+  <!-- 导航按钮 -->
+  <div id="navBtn" style="
+    position:absolute;
+    right:14px;
+    bottom:14px;
+    background:#ff6a00;
+    color:#fff;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+    z-index:999;">
+    导航前往
+  </div>
+</div>
 
 <script>
-// ===== 1️⃣ Web Mercator → 经纬度 转换函数 =====
-function mercatorToLngLat(x, y) {
-  var lng = x / 20037508.34 * 180;
-  var lat = y / 20037508.34 * 180;
-  lat = 180 / Math.PI * (2 * Math.atan(Math.exp(lat * Math.PI / 180)) - Math.PI / 2);
-  return new BMap.Point(lng, lat);
-}
+(function () {
+  const name = "元明机械";
+  const lat = 29.7183;
+  const lng = 121.5876;
 
-// ===== 2️⃣ 你获取到的“巨大坐标”（直接填这里）=====
-var mercatorLng = 13534464.78071;
-var mercatorLat = 3461072.17505;
+  document.getElementById("navBtn").onclick = function () {
+    const ua = navigator.userAgent.toLowerCase();
 
-// 转换为百度可用的经纬度
-var point = mercatorToLngLat(mercatorLng, mercatorLat);
+    // 百度地图 App 协议
+    const appUrl =
+      `baidumap://map/direction?destination=name:${name}|latlng:${lat},${lng}&mode=driving&coord_type=bd09ll`;
 
-// ===== 3️⃣ 初始化地图 =====
-var map = new BMap.Map("map");
-map.centerAndZoom(point, 17);
-map.enableScrollWheelZoom(true);
+    // 百度地图网页版（不会 404）
+    const webUrl =
+      `https://map.baidu.com/dir/?destination=latlng:${lat},${lng}|name:${name}`;
 
-// ===== 4️⃣ 添加标注 =====
-var marker = new BMap.Marker(point);
-map.addOverlay(marker);
+    if (/iphone|ipad|ipod|android/.test(ua)) {
+      // 先尝试打开 APP
+      window.location.href = appUrl;
 
-// ===== 5️⃣ 信息窗口（企业标注）=====
-var infoWindow = new BMap.InfoWindow(
-  `
-  <strong style="font-size:15px;">宁波宇兴塑料机械厂</strong><br>
-  地址：宁波市鄞州区经济技术开发区<br>
-  电话：0574-XXXXXXX
-  `,
-  {
-    width: 260,
-    height: 120
-  }
-);
-
-marker.openInfoWindow(infoWindow);
-marker.addEventListener("click", function () {
-  this.openInfoWindow(infoWindow);
-});
+      // 兜底：APP 没装 → 打开网页
+      setTimeout(() => {
+        window.open(webUrl, "_blank");
+      }, 2500);
+    } else {
+      // PC 直接网页
+      window.open(webUrl, "_blank");
+    }
+  };
+})();
 </script>
+
+<h1 id="宁波宇兴塑料机械厂-元明机械"><a href="#宁波宇兴塑料机械厂-元明机械" class="headerlink" title="宁波宇兴塑料机械厂(元明机械)"></a>宁波宇兴塑料机械厂(元明机械)</h1><p><strong>📍 公司地址</strong><br>浙江省宁波市北仑区塘路墩1号<br><strong>📞 联系方式</strong><br>电话：0574-83032202<br>传真：0574-83032203<br>邮箱：<a href="mailto:&#110;&#x62;&#121;&#117;&#x78;&#105;&#x6e;&#103;&#x40;&#x31;&#x32;&#x36;&#46;&#x63;&#111;&#x6d;">nbyuxing@126.com</a>
+ </p>
 
   </div>
 
