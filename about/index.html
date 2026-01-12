@@ -28,8 +28,8 @@
 <meta property="og:site_name">
 <meta property="og:description" content="宇兴塑机,宁波宇兴塑料机械厂简介,注塑机,公司简介,高新技术企业,宁波经济技术开发区">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-01-12T00:45:42.682Z">
-<meta property="article:modified_time" content="2026-01-12T00:45:42.682Z">
+<meta property="article:published_time" content="2026-01-12T00:50:56.943Z">
+<meta property="article:modified_time" content="2026-01-12T00:50:56.943Z">
 <meta property="article:author" content="宁波宇兴塑料机械厂">
 <meta property="article:tag" content="宁波宇兴塑料机械厂,宇兴塑机,注塑机,塑料机械,注塑机厂家,THX注塑机,XT注塑机,YX注塑机">
 <meta name="twitter:card" content="summary_large_image">
@@ -323,36 +323,36 @@
 
 <script>
 (function () {
-  const name = "元明机械";
+  const poiName = "元明机械";
 
   document.getElementById("navBtn").onclick = function () {
     const ua = navigator.userAgent.toLowerCase();
 
-    // 百度地图 App 协议
+    // 百度地图 App（只用名称，避免坐标偏移）
     const appUrl =
-      `baidumap://map/direction?destination=name:${name}|latlng:${lat},${lng}&mode=driving&coord_type=bd09ll`;
+      `baidumap://map/direction?destination=${encodeURIComponent(poiName)}&mode=driving`;
 
-    // 百度地图网页版（不会 404）
+    // 百度地图网页版（兜底，不 404）
     const webUrl =
-      `https://map.baidu.com/dir/?destination=latlng:${lat},${lng}|name:${name}`;
+      `https://map.baidu.com/dir/?destination=${encodeURIComponent(poiName)}`;
 
     if (/iphone|ipad|ipod|android/.test(ua)) {
-      // 先尝试打开 APP
+      // 尝试唤起百度地图 App
       window.location.href = appUrl;
 
-      // 兜底：APP 没装 → 打开网页
+      // App 未安装兜底
       setTimeout(() => {
         window.open(webUrl, "_blank");
-      }, 2500);
+      }, 2000);
     } else {
-      // PC 直接网页
+      // PC
       window.open(webUrl, "_blank");
     }
   };
 })();
 </script>
 
-<h1 id="宁波宇兴塑料机械厂-元明机械"><a href="#宁波宇兴塑料机械厂-元明机械" class="headerlink" title="宁波宇兴塑料机械厂(元明机械)"></a>宁波宇兴塑料机械厂(元明机械)</h1><p><strong>📍 公司地址</strong><br>浙江省宁波市北仑区塘路墩1号<br><strong>📞 联系方式</strong><br>电话：0574-83032202<br>传真：0574-83032203<br>邮箱：<a href="mailto:&#x6e;&#x62;&#x79;&#x75;&#x78;&#105;&#110;&#103;&#x40;&#49;&#x32;&#x36;&#x2e;&#99;&#111;&#x6d;">nbyuxing@126.com</a>
+<h1 id="宁波宇兴塑料机械厂-元明机械"><a href="#宁波宇兴塑料机械厂-元明机械" class="headerlink" title="宁波宇兴塑料机械厂(元明机械)"></a>宁波宇兴塑料机械厂(元明机械)</h1><p><strong>📍 公司地址</strong><br>浙江省宁波市北仑区塘路墩1号<br><strong>📞 联系方式</strong><br>电话：0574-83032202<br>传真：0574-83032203<br>邮箱：<a href="mailto:&#x6e;&#98;&#x79;&#x75;&#120;&#x69;&#x6e;&#103;&#x40;&#x31;&#50;&#x36;&#x2e;&#99;&#111;&#x6d;">nbyuxing@126.com</a>
  </p>
 
   </div>
