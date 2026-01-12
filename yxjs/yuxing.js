@@ -27,26 +27,21 @@ $(function () {
   });
 
   /* ===============================
-     产品介绍页 Banner 替换 + 轮播
-     （仅 products 首页 + 系列页）
+     产品展示页 Banner 箭头轮播
+     （仅 products 分类页，不含具体型号页）
      =============================== */
 
-  // 统一处理路径
-  const path = location.pathname.replace(/\/$/, '');
-  const parts = path.split('/');
-  const depth = parts.length;
-
-  // 只允许：
-  // /products
-  // /products/thx
-  // /products/xt
-  // /products/yx
-  if (parts[1] !== 'products' || depth > 3) return;
+  // ✅ 只匹配 /products 且「没有第二层路径」
+  // 例如：
+  // ✔ /products
+  // ✔ /products/
+  // ✘ /products/thx-120
+  if (!/^\/products\/?$/.test(location.pathname)) return;
 
   const $banner = $('.page-header, .banner, .index-header').first();
   if (!$banner.length) return;
 
-  // 1️⃣ 替换 Banner 内容
+  // 1️⃣ 替换 Banner 内容（左右箭头）
   $banner.html(`
     <div class="page-banner-slider">
       <div class="banner-track">
@@ -54,35 +49,55 @@ $(function () {
         <div class="banner-slide" style="background-image:url(/img/products_banner2.png)"></div>
         <div class="banner-slide" style="background-image:url(/img/products_banner3.png)"></div>
       </div>
-      <div class="banner-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
+
+      <div class="banner-arrow prev">‹</div>
+      <div class="banner-arrow next">›</div>
     </div>
   `);
 
-  // 2️⃣ 初始化轮播
+  // 2️⃣ 初始化轮播逻辑
   const $slider = $banner.find('.page-banner-slider');
   const $track = $slider.find('.banner-track');
-  const $dots = $slider.find('.dot');
-  const total = $dots.length;
+  const $slides = $slider.find('.banner-slide');
+  const total = $slides.length;
 
   let index = 0;
+  let timer = null;
 
   function update() {
     $track.css('transform', `translateX(-${index * 100}%)`);
-    $dots.removeClass('active').eq(index).addClass('active');
   }
 
-  $dots.on('click', function () {
-    index = $(this).index();
-    update();
-  });
-
-  setInterval(function () {
+  function next() {
     index = (index + 1) % total;
     update();
-  }, 5000);
+  }
+
+  function prev() {
+    index = (index - 1 + total) % total;
+    update();
+  }
+
+  // 箭头事件
+  $slider.find('.next').on('click', function () {
+    next();
+    restart();
+  });
+
+  $slider.find('.prev').on('click', function () {
+    prev();
+    restart();
+  });
+
+  function start() {
+    timer = setInterval(next, 4000); // ⭐ 轮播速度在这里改
+  }
+
+  function restart() {
+    clearInterval(timer);
+    start();
+  }
+
+  start();
 
 });
