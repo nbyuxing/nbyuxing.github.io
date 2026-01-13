@@ -343,7 +343,77 @@
   border-radius: 6px;
 }
 
-/* 图片弹层（最终稳定版） */
+/* 产品详情页移动端优化 */
+@media (max-width: 768px) {
+
+  /* Tab 容器改成可滚动横向排列 */
+  .product-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* 滑动更顺畅 */
+    margin: 20px 0;
+    padding-bottom: 5px;
+  }
+
+  /* Tab 按钮更小更紧凑 */
+  .tab-btn {
+    flex: 0 0 auto;   /* 横向不压缩 */
+    margin: 0 6px;
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+
+  .tab-btn.active {
+    font-size: 14px;
+  }
+
+  /* Tab 内容宽度自适应，图片占满屏幕 */
+  .tab-content {
+    max-width: 100%;
+    margin: 0 auto 30px;
+  }
+
+  /* 图片竖向排列，撑满屏幕宽度 */
+  .img-row {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .img-row img {
+    width: 100%;
+  }
+
+  /* 参数按钮放到图片下方，防止挡住图片 */
+  .param-btn {
+    position: relative;
+    top: auto;
+    right: auto;
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  /* 弹出层图片适应屏幕 */
+  .img-popup img {
+    max-width: 95%;
+    max-height: 80%;
+  }
+
+  /* 弹出层关闭按钮缩小 */
+  .img-popup .close {
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+  }
+
+}
+
+/* ===============================
+   产品详情页 图片弹层（最终稳定版）
+   =============================== */
 
 .img-popup {
   display: none;
