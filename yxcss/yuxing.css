@@ -412,14 +412,14 @@
 }
 
 /* ===============================
-   产品详情页 图片弹层（最终稳定版）
+   图片弹层（终极稳定 + 视觉友好）
    =============================== */
 
 .img-popup {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, .85);
+  background: rgba(0,0,0,.85);
   z-index: 9999;
 }
 
@@ -429,54 +429,44 @@
   justify-content: center;
 }
 
-/* 弹层内容容器：以图片自身尺寸居中 */
+/* 图片载体 */
 .popup-inner {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;  /* 防止图片溢出 */
+  display: inline-block;
 }
 
-/* 图片本体：永远在视口正中 */
+/* 图片本体 */
 .popup-inner img {
   max-width: 90vw;
   max-height: 90vh;
   display: block;
   border-radius: 6px;
-  object-fit: contain;  /* 保证图片完全适应视口 */
 }
 
-/* 关闭按钮：在图片“中间右侧”，不挡画面 */
+/* 关闭按钮：图片中部右侧 */
 .popup-inner .close {
   position: absolute;
   top: 50%;
-  right: 12px;
+  right: 6px;
   transform: translateY(-50%);
-
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
   text-align: center;
-
-  font-size: 22px;
-  font-weight: bold;
   border-radius: 50%;
-
-  background: rgba(0,0,0,0.25);
-  color: rgba(255,255,255,0.7);
-
+  font-size: 22px;
   cursor: pointer;
-  opacity: 0.3;
+
+  background: rgba(0,0,0,.15);
+  color: rgba(255,255,255,.6);
+  opacity: .3;
   transition: all .2s ease;
 }
 
-/* 鼠标移入才高亮 */
+/* Hover 高亮 */
 .popup-inner:hover .close {
   opacity: 1;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,.55);
   color: #fff;
 }
 

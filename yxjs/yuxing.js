@@ -15,30 +15,33 @@ $(function () {
 
 
   /* =========================
-   图片 / 参数 点击放大
+   图片 / 参数 点击放大（稳定版）
    ========================= */
 function openPopup(imgSrc) {
-  const popupImg = $('#popupImg');
+  const $popup = $('#imgPopup');
+  const $img = $('#popupImg');
 
-  // 动态设置图片源
-  popupImg.attr('src', imgSrc);
+  // 先清理旧状态（非常关键）
+  $img.off('load');
+  $img.attr('src', '');
 
-  // 监听图片加载事件，确保居中
-  popupImg.on('load', function () {
-    // 图片加载完成后显示弹出层
-    $('#imgPopup').fadeIn(200).addClass('show');
-    $('body').addClass('no-scroll');
+  // 先显示弹层（flex 居中先建立）
+  $popup.addClass('show').fadeIn(150);
+  $('body').addClass('no-scroll');
+
+  // 再设置图片
+  $img.attr('src', imgSrc);
+
+  // 只监听这一次加载
+  $img.one('load', function () {
+    // 不做任何位置计算，交给 CSS
   });
-
-  // 如果图片已经加载完成，直接显示弹出层
-  if (popupImg[0].complete) {
-    $('#imgPopup').fadeIn(200).addClass('show');
-    $('body').addClass('no-scroll');
-  }
 }
 
 function closePopup() {
-  $('#imgPopup').fadeOut(200).removeClass('show');
+  $('#imgPopup').fadeOut(150, function () {
+    $(this).removeClass('show');
+  });
   $('body').removeClass('no-scroll');
 }
 
