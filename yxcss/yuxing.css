@@ -138,17 +138,17 @@
   }
 
   .home-slogan .line-1 {
-    font-size: 30px;          /* 原来 56px → 手机太大 */
+    font-size: 25px;          /* 原来 56px → 手机太大 */
     line-height: 1.3;
   }
 
   .home-slogan .line-2 {
-    font-size: 18px;          /* 原来 30px */
+    font-size: 15px;          /* 原来 30px */
     margin-top: 6px;
   }
 
   .home-slogan .line-3 {
-    font-size: 14px;          /* 原来 20px */
+    font-size: 10px;          /* 原来 20px */
     margin-top: 4px;
     letter-spacing: 0.5px;
   }
@@ -281,11 +281,13 @@
 /* ===============================
    产品详情页 选项卡按钮
    =============================== */
+
 /* tabs */
 .product-tabs {
   text-align: center;
   margin: 30px 0;
 }
+
 .tab-btn {
   margin: 0 6px;
   padding: 10px 22px;
@@ -296,6 +298,7 @@
   border-radius: 6px;
   cursor: pointer;
 }
+
 .tab-btn.active {
   background: #1e88e5;
   color: #fff;
@@ -308,6 +311,7 @@
   max-width: 1100px;
   margin: 0 auto 40px;
 }
+
 .tab-content.active {
   display: block;
 }
@@ -321,6 +325,7 @@
   font-weight: bold;
   cursor: pointer;
 }
+
 .param-btn::before {
   content: "📊 ";
 }
@@ -331,102 +336,97 @@
   gap: 20px;
   margin-top: 40px;
 }
+
 .img-row img {
   width: 50%;
   cursor: zoom-in;
   border-radius: 6px;
 }
 
-/* 弹出层 */
+/* 图片弹层（最终稳定版） */
+
 .img-popup {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.8);
+  background: rgba(0,0,0,.85);
   z-index: 9999;
 }
-.img-popup img {
-  max-width: 90%;
-  max-height: 90%;
-  margin: 5% auto;
+
+.img-popup.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 弹层内容容器：以图片自身尺寸居中 */
+.popup-inner {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 图片本体：永远在视口正中 */
+.popup-inner img {
+  max-width: 90vw;
+  max-height: 90vh;
   display: block;
+  border-radius: 6px;
 }
-.img-popup .close {
+
+/* 关闭按钮：在图片“中间右侧”，不挡画面 */
+.popup-inner .close {
   position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 32px;
-  color: #fff;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 50%;
+
+  background: rgba(0,0,0,0.25);
+  color: rgba(255,255,255,0.7);
+
   cursor: pointer;
+  opacity: 0.3;
+  transition: all .2s ease;
 }
-/* 产品详情页移动端优化 */
+
+/* 鼠标移入才高亮 */
+.popup-inner:hover .close {
+  opacity: 1;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+}
+
+/* 禁止背景滚动 */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* 移动端优化 */
 @media (max-width: 768px) {
 
-  /* Tab 容器改成可滚动横向排列 */
-  .product-tabs {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; /* 滑动更顺畅 */
-    margin: 20px 0;
-    padding-bottom: 5px;
+  .popup-inner img {
+    max-width: 95vw;
+    max-height: 85vh;
   }
 
-  /* Tab 按钮更小更紧凑 */
-  .tab-btn {
-    flex: 0 0 auto;   /* 横向不压缩 */
-    margin: 0 6px;
-    padding: 6px 14px;
-    font-size: 14px;
-    border-radius: 4px;
+  .popup-inner .close {
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 20px;
   }
-
-  .tab-btn.active {
-    font-size: 14px;
-  }
-
-  /* Tab 内容宽度自适应，图片占满屏幕 */
-  .tab-content {
-    max-width: 100%;
-    margin: 0 auto 30px;
-  }
-
-  /* 图片竖向排列，撑满屏幕宽度 */
-  .img-row {
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 20px;
-  }
-
-  .img-row img {
-    width: 100%;
-  }
-
-  /* 参数按钮放到图片下方，防止挡住图片 */
-  .param-btn {
-    position: relative;
-    top: auto;
-    right: auto;
-    display: inline-block;
-    margin-top: 8px;
-    font-size: 14px;
-  }
-
-  /* 弹出层图片适应屏幕 */
-  .img-popup img {
-    max-width: 95%;
-    max-height: 80%;
-  }
-
-  /* 弹出层关闭按钮缩小 */
-  .img-popup .close {
-    top: 10px;
-    right: 15px;
-    font-size: 28px;
-  }
-
 }
-
 
 /* ===============================
    页面 Banner 三图轮播

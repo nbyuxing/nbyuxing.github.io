@@ -1,29 +1,79 @@
 $(function () {
 
-  /* ===============================
-     产品页 Tab 切换
-     =============================== */
-  $('.tab-btn').click(function () {
-    const key = $(this).data('tab');
+  /* =========================
+     Tab 切换
+     ========================= */
+  $('.tab-btn').on('click', function () {
+    const tab = $(this).data('tab');
 
     $('.tab-btn').removeClass('active');
     $(this).addClass('active');
 
     $('.tab-content').removeClass('active');
-    $('#tab-' + key).addClass('active');
+    $('#tab-' + tab).addClass('active');
   });
 
-  /* ===============================
-     图片放大 / 参数弹层
-     =============================== */
-  $('.zoom-img, .param-btn').click(function () {
-    const img = $(this).data('img') || $(this).attr('src');
-    $('#popupImg').attr('src', img);
-    $('#imgPopup').fadeIn();
+
+  /* =========================
+     图片 / 参数 点击放大
+     ========================= */
+  function openPopup(imgSrc) {
+    const popupImg = $('#popupImg');
+    
+    // 动态设置图片源
+    popupImg.attr('src', imgSrc);
+
+    // 强制延迟，以确保图片正确显示并居中
+    setTimeout(function() {
+      $('#imgPopup').fadeIn(200).addClass('show');
+      $('body').addClass('no-scroll');
+    }, 10);  // 延迟 10ms 确保图片加载
+
+    // 监听图片加载事件，确保居中
+    popupImg.on('load', function() {
+      // 强制更新样式，确保居中
+      $('#imgPopup').addClass('show');
+    });
+  }
+
+  function closePopup() {
+    $('#imgPopup').fadeOut(200).removeClass('show');
+    $('body').removeClass('no-scroll');
+  }
+
+  // 点击图片
+  $('.zoom-img').on('click', function () {
+    openPopup($(this).attr('src'));
   });
 
-  $('.img-popup .close, .img-popup').click(function () {
-    $('#imgPopup').fadeOut();
+  // 点击参数按钮
+  $('.param-btn').on('click', function () {
+    openPopup($(this).data('img'));
+  });
+
+
+  /* =========================
+     关闭逻辑（三重保险）
+     ========================= */
+
+  // 点关闭按钮
+  $('#imgPopup .close').on('click', function (e) {
+    e.stopPropagation();
+    closePopup();
+  });
+
+  // 点黑色遮罩
+  $('#imgPopup').on('click', function (e) {
+    if (e.target === this) {
+      closePopup();
+    }
+  });
+
+  // ESC 键关闭
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closePopup();
+    }
   });
 
   /* ===============================
